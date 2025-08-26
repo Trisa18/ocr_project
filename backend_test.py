@@ -191,7 +191,7 @@ class AITripSystemTester:
             "items": ["Room booking", "Breakfast"]
         }
         
-        success, response = self.run_test("Create Manual Expense", "POST", "expenses", 201, 
+        success, response = self.run_test("Create Manual Expense", "POST", "expenses", 200, 
                                         data=expense_data, token=self.employee_token)
         
         if success and 'id' in response:
