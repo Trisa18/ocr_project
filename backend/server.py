@@ -400,7 +400,7 @@ async def create_expense_with_receipt(
         "trip_id": trip_id,
         "employee_id": current_user["id"],
         "vendor": ocr_data.get("vendor", "Unknown"),
-        "amount": float(ocr_data.get("amount", 0)),
+        "amount": float(ocr_data.get("amount") or 0),
         "category": ocr_data.get("category", "Miscellaneous"),
         "date": ocr_data.get("date", datetime.now(timezone.utc).strftime("%Y-%m-%d")),
         "receipt_filename": file.filename,
