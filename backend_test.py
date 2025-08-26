@@ -115,7 +115,7 @@ class AITripSystemTester:
         }
         
         print("   Testing AI Budget Allocation...")
-        success, response = self.run_test("Create Trip Request", "POST", "trips", 201, data=trip_data, token=self.employee_token)
+        success, response = self.run_test("Create Trip Request", "POST", "trips", 200, data=trip_data, token=self.employee_token)
         
         if success and 'id' in response:
             self.created_trip_id = response['id']
